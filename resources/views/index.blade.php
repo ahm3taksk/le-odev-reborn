@@ -3,7 +3,10 @@
         @include('inc.head')
     </head>
     <body>
-
+        @include('inc.navbar')
+        @include('inc.hero')
+        @include('inc.indexAbout')
+        @include('inc.questionPreview')
     </body>
     @include('inc.script')
     <footer>

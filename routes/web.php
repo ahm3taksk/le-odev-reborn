@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AnswerQuestionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +16,16 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+
+Route::get('/ask', [IndexController::class, 'ask'])->name('ask');
+Route::post('/ask/store', [QuestionController::class, 'store'])->name('ask.store');
+
+Route::get('/answer/{questionId}', [IndexController::class, 'answerQuestion'])->name('answer');
+Route::post('/answer/{questionId}', [IndexController::class, 'answerQuestion'])->name('answer');
+Route::get('/answer/{questionId}', [AnswerQuestionController::class, 'showQuestion'])->name('answer.show');
+Route::post('/answer', [AnswerQuestionController::class, 'store'])->name('answer.store');
+
+
 
 Route::middleware([
     'auth:sanctum',

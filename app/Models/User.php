@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,4 +57,19 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Check if the user is an administrator.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        // Burada yönetici kontrolü için gereken koşulları belirtin.
+        // Örneğin, eğer kullanıcının bir "role" alanı varsa ve bu alan yöneticiyi belirtiyorsa true döndürebilirsiniz.
+        // Örnek olarak "role" alanı "admin" olan kullanıcıları yönetici olarak kabul edebiliriz.
+
+
+        return $this->role === 'admin';
+    }
 }
