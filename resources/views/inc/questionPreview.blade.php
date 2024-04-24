@@ -15,7 +15,7 @@
                             <h5 class="questionCardLesson"><i class="fa fa-book me-2"></i>{{ $question->question_lesson }} - {{ $question->question_subject }}</h5>
                         </div>
                         <div class="questionCardContent">
-                            <p class="questionCardText">{{ $question->question_text }}</p>
+                            <p class="questionCardText">{{ strlen($question->question_text) > 100 ? substr($question->question_text, 0, 600) . '...' : $question->question_text }}</p>
                         </div>
                         <div class="questionCardFooter">
                             <a href="{{ route('answer.show', ['questionId' => $question->id]) }}" class="btnPrimary">Çöz</a>
