@@ -1,0 +1,42 @@
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+}
+
+body {
+    line-height: 1.5 !important;
+}
+
+ol, ul {
+    list-style: none !important;
+}
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+input {
+    border: none !important;
+    outline: none !important;
+}
+
+img {
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}

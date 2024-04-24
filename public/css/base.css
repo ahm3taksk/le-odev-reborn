@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #3BB77E;
+    --secondary-color: #FDC040;
+    --third-color: #FD6E6E;
+    --bg-dark: #1a1a1a;
+    --primary-fade: #2b9161;
+    --bg-light: #f9f9f9;
+    --bg-orange: #ff7e5f;
+    --bg-purple: #ad0ec2;
+    --bg-blue: #0e6cad;
+    --primary-light: #DEF9EC;
+    --text-dark: #000000;
+    --text-light: #fff;
+    --bg-grey: #c9c7c7;
+    --bg-light-grey: #f9f9f9;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-fade);
+
+}
+
+.container {
+    max-width: 1610px !important;
+    margin: 0 auto !important;
+}
+
+.progress-bar {
+    background-color: var(--primary-color) !important;
+}

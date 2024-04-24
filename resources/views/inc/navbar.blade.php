@@ -1,59 +1,55 @@
-<header class="sticky-top navigation">
-    <div class="container px-0">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
-            <a class="navbar-brand" href="{{ route('index'); }}">
+<div class="container">
+    <header class="sticky-top navbar">
+        <div class="navbarMenu">
+            <a class="navbarLogo" href="{{ route('index') }}">
                 <img class="img-fluid" src="/image/logo.png">
-
             </a>
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
-                data-target="#navigation">
-                <i class="ti-align-right h4 text-dark menu"></i>
-            </button>
-            <div class="collapse navbar-collapse text-center justify-content-end" id="navigation">
-                <ul class="navbar-nav align-items-center">
-                    <li class="navitem nav-item w-auto text-center navitem">
-                        <a class="nav-link active fw-bold text-turkuaz" aria-current="page"
-                            href="{{ url('/Le-Odev/') }}">Anasayfa</a>
-                    </li>
-
-                    @auth
-                    <li class="navitem nav-item w-auto text-center">
-                        <a class="nav-link active fw-bold text-turkuaz" aria-current="page"
-                        href="{{ route('ask', ['userid' => auth()->id()]) }}">Soru sor</a>
-                    </li>
-                    @if(auth()->user()->isAdmin())
-                    <li class="navitem nav-item w-auto text-center">
-                        <a class="nav-link active fw-bold text-turkuaz" aria-current="page"
-                            href="{{ url('/Le-Odev/admin/') }}">Admin Paneli</a>
-                    </li>
-                    @endif
-                    <li class="navitem nav-item w-auto text-center float-end">
-                        <a class="nav-link active fw-bold text-turkuaz"
-                            href="{{ route('index', ['userid' => auth()->id()]) }}">
-                            <span class="text-dark text-decoration-none"> Yardıma İhtiyacım Var</span></a>
-                    </li>
-                    <li class="navitem nav-item w-auto text-center float-end">
-                        <a class="nav-link active fw-bold text-turkuaz"
-                            href="{{ route('profile.show', ['user' => auth()->user()->username]) }}">
-                            <span class="text-dark text-decoration-none"> Profil</span></a>
-                    </li>
-                    <li class="navitem nav-item w-auto text-center float-end">
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <a class="btn gradient-5 fw-bold ml-lg-4" href="{{ route('logout') }}"
-                                onclick="event.preventDefault(); this.closest('form').submit();">Çıkış Yap</a>
-                        </form>
-                    </li>
-                    @else
-                    <li class="navitem nav-item w-auto text-center float-end">
-                        <a class="fw-bold ml-lg-4" href="{{ route('login') }}">Giriş Yap</a>
-                    </li>
-                    <li class="navitem nav-item w-auto text-center float-end">
-                        <a class="fw-bold ml-lg-4" href="{{ route('register') }}">Kayıt Ol</a>
-                    </li>
-                    @endauth
-                </ul>
+            <div class="navbarMenuCenter">
+                <div class="navbarItem">
+                    <a aria-current="page" href="{{ route('index') }}">Anasayfa</a>
+                </div>
+                @auth
+                <div class="navbarItem">
+                    <a aria-current="page" href="{{ route('ask', ['userid' => auth()->user()->id]) }}">Soru sor</a>
+                </div>
+                @if(auth()->user()->isAdmin())
+                    <div class="navbarItem">
+                        <a aria-current="page" href="{{ url('/Le-Odev/admin/') }}">Admin Paneli</a>
+                    </div>
+                @endif
+                <div class="navbarItem">
+                    <a aria-current="page" href="{{ route('index') }}">Yardıma İhtiyacım Var</a>
+                </div>
             </div>
-        </nav>
-    </div>
-</header>
+            <div class="navbarMenuRight">
+                    <div class="navbarDropdownBtn">
+                        
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>  
+                            Kullanıcı
+                        </a>
+                        <div class="navbarDropdown">
+                            <div class="navbarDropdownItem">
+                                <a aria-current="page" href="{{ route('profile.show', ['user' => auth()->user()->username]) }}">Profil</a>
+                            </div>
+                            <div class="navbarDropdownItem">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Çıkış Yap</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                @else
+
+                    <div class="btnPrimary">
+                        <a class="" href="{{ route('login') }}">Giriş Yap</a>
+                    </div>
+                    <div class="btnSecondary">
+                        <a class="" href="{{ route('register') }}">Kayıt Ol</a>
+                    </div>  
+                </div>
+                @endauth
+        </div>
+    </header>
+</div>

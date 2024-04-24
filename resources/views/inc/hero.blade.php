@@ -1,4 +1,4 @@
-<section class="section pb-0 heroSection" style="height: 91vh">
+<section class="section pb-0 heroSection">
     <div class="container mt-5">
         <div class="row hero">
             <div class="col-lg-7 text-center text-lg-left ms-auto mx-auto">

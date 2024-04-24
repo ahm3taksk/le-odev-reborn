@@ -1,0 +1,77 @@
+.indexAbout p {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: var(--text-dark) !important;
+}
+
+.indexAbout h4 {
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    color: var(--text-dark) !important
+}
+
+.indexAbout svg {
+    font-size: 40px !important;
+    color: var(--primary-color) !important;
+}
+
+.home-testimonial  {
+    background-color:  #FBFBFB !important;
+    height:  580px !important;
+  }
+  .home-testimonial-bottom {
+    background-color:  #FBFBFB !important;
+    transition:  background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s !important;
+    margin-top:  20px !important;
+    margin-bottom:  0px !important;
+    position:  relative !important;
+    height:  130px !important;
+    top:  190px !important;
+  }
+  .home-testimonial h3 {
+    color:  var(--primary-color) !important;
+    font-size:  18px !important;
+    font-weight:  500 !important;
+    text-transform:  uppercase !important;
+  }
+  .home-testimonial h2 {
+    color:  black !important;
+    font-size:  28px !important;
+    font-weight:  700 !important;
+  }
+  .testimonial-inner {
+    position:  relative !important;
+    top:  -174px !important;
+  }
+  .testimonial-pos {
+    position:  relative !important;
+    top:  24px !important;
+  }
+  .testimonial-inner .tour-desc {
+    border-radius:  5px !important;
+    padding:  40px !important;
+  }
+  .color-grey-3 {
+    font-family:  "Montserrat",  Sans-serif !important;
+    font-size:  14px !important;
+    color:  #6c83a2 !important;
+  }
+  .testimonial-inner img.tm-people {
+    width:  150px !important;
+    height:  150px !important;
+    -webkit-border-radius:  50% !important;
+    border-radius:  50% !important;
+    -o-object-fit:  cover !important;
+    object-fit:  cover !important;
+    max-width:  none !important;
+  }
+  .link-name {
+    font-family:  "Montserrat",  Sans-serif !important;
+    font-size:  14px !important;
+    color:  #6c83a2 !important;
+  }
+  .link-position {
+    font-family:  "Montserrat",  Sans-serif !important;
+    font-size:  12px !important;
+    color:  #6c83a2 !important;
+  }
